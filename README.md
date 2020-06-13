@@ -57,31 +57,41 @@ Please read up on how to use the [validator](https://docs.prylabs.network/docs/h
 You can repeat step 2 & 3 as often as you like, make sure to restart your validator to make it notice your new accounts!
 
 ### (early WIP) create lots of validator accounts
-Requirements:
+
+#### Requirements
 * Synced geth service
 * Enjoying the thrill to maybe loose coins
 
 #### Steps
-##### Set password
-Edit `.env` and set the password for your new accounts.
-##### Create a geth account
-```
-docker exec -it geth geth --goerli account new
-```
-##### Get lots of coins from your favorite coin buddy
-Go on Discord and ask for coins, Ivan is a good bet.
-##### Unlock account
-```
-docker exec -it geth geth attach http://localhost:8545/ --exec="personal.unlockAccount(\"put-your-address-here\",'put-your-password-here',3600)"
-```
-##### Check script
-Location: `./scripts/createAccounts.sh`
-Please check for the number of validators to create and if there is something that might go wrong on your setup. Start with a very small number of validators and increase if everything works.
-##### Run the script
-```
-./scripts/createAccounts.sh
-```
-Watch for errors. Your validator accounts will appear in directory `./validator`.
+
+1. **Set password**
+
+   Edit `.env` and set the password for your new accounts.
+
+2. **Create a geth account**
+
+   ```
+   docker exec -it geth geth --goerli account new
+   ```
+
+   Edit `.env` again and save the account address there.
+
+3. **Get some coins**
+
+   Go on [Discord](https://discord.gg/CTYGPUJ) and request coins in the `#🤑-request-goerli-eth` channel, or ask a team member.
+
+4. **Check script**
+
+   Location: `./scripts/createAccounts.sh`
+
+   Please check for the number of validators to create and if there is something that might go wrong on your setup. Start with a very small number of validators and increase if everything works.
+
+5. **Run the script**
+
+   ```
+   ./scripts/createAccounts.sh
+   ```
+   Watch for errors. Your validator accounts will appear in directory `./validator`.
 
 ## Run your prysm Ethereum 2.0 staking node
 
