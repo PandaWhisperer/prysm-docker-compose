@@ -75,11 +75,11 @@ Go on Discord and ask for coins, Ivan is a good bet.
 docker exec -it geth geth attach http://localhost:8545/ --exec="personal.unlockAccount(\"put-your-address-here\",'put-your-password-here',3600)"
 ```
 ##### Check script
-Location: `./createAccounts.sh`
+Location: `./scripts/createAccounts.sh`
 Please check for the number of validators to create and if there is something that might go wrong on your setup. Start with a very small number of validators and increase if everything works.
 ##### Run the script
 ```
-./createAccounts.sh
+./scripts/createAccounts.sh
 ```
 Watch for errors. Your validator accounts will appear in directory `./validator`.
 
