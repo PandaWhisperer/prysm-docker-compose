@@ -80,13 +80,20 @@ You can repeat step 2 & 3 as often as you like, make sure to restart your valida
 
    Go on [Discord](https://discord.gg/CTYGPUJ) and request coins in the `#🤑-request-goerli-eth` channel, or ask a team member.
 
-4. **Check script**
+4. **Unlock account**
+
+   Run `./scripts/unlockAccount.sh` to unlock your funding account.
+
+   You can also run `./scripts/getBalance.sh` to check your balance.
+
+5. **Check script**
 
    Location: `./scripts/createAccounts.sh`
 
    Please check for the number of validators to create and if there is something that might go wrong on your setup. Start with a very small number of validators and increase if everything works.
 
-5. **Run the script**
+
+6. **Run the script**
 
    ```
    ./scripts/createAccounts.sh
